@@ -1,7 +1,9 @@
 package library;
 
-import com.sun.jdi.connect.spi.Connection;
+
+import java.sql.Connection;
 import java.sql.DriverManager;
+import javax.swing.JOptionPane;
 
 
 public class koneksi {
@@ -10,7 +12,9 @@ public class koneksi {
         try{
             Class.forName("com.mysql.jdbc.Driver");
             Connection koneksi = DriverManager.getConnection("jdbc:mysql://localhost/db_library","root","");
+            return koneksi;
         }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
             return null;
         }
     }
