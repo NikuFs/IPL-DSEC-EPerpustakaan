@@ -101,7 +101,7 @@ public class FDataAnggota extends javax.swing.JFrame {
             }
             rs.close();
         }catch(Exception e){
-        
+            JOptionPane.showMessageDialog(null, e);
         }
     }
     
@@ -222,7 +222,7 @@ public class FDataAnggota extends javax.swing.JFrame {
             
             String sql_update = "UPDATE tbl_anggota SET nis='"+NIS.getText()
                 +"',nama = '"+NAMA.getText()
-                +"',jk = '"+jk
+                +"',jk = '"+jk  
                 +"',id_tingkat = '"+KTINGKAT.getSelectedItem()
                 +"',kd_jurusan = '"+KJURUSAN.getSelectedItem()
                 +"',id_kelas = '"+KKELAS.getSelectedItem()
@@ -248,7 +248,7 @@ public class FDataAnggota extends javax.swing.JFrame {
             st.executeUpdate(sql_delete);
             JOptionPane.showMessageDialog(null, "Data berhasil dihapus");
         }catch(Exception e){
-        
+            JOptionPane.showMessageDialog(null, "Data tidak berhasil dihapus");
         }
     }
     
@@ -295,7 +295,7 @@ public class FDataAnggota extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
-        jLabel1.setText("Kelola Data Anggota Perpustakaan");
+        jLabel1.setText("Kelola Data Anggota Pustakawan");
 
         BKeluar.setText("Keluar");
         BKeluar.addActionListener(new java.awt.event.ActionListener() {
@@ -323,6 +323,11 @@ public class FDataAnggota extends javax.swing.JFrame {
         jLabel10.setText("STATUS");
 
         ID.setEnabled(false);
+        ID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IDActionPerformed(evt);
+            }
+        });
 
         JK.add(JKP);
         JKP.setText("PRIA");
@@ -655,6 +660,10 @@ public class FDataAnggota extends javax.swing.JFrame {
             BDelete.setEnabled(false);
         }
     }//GEN-LAST:event_BDeleteActionPerformed
+
+    private void IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IDActionPerformed
 
     /**
      * @param args the command line arguments

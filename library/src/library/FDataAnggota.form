@@ -180,7 +180,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="sansserif" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Kelola Data Anggota Perpustakaan"/>
+            <Property name="text" type="java.lang.String" value="Kelola Data Anggota Pustakawan"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="BKeluar">
@@ -240,6 +240,9 @@
           <Properties>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="IDActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="NIS">
         </Component>
