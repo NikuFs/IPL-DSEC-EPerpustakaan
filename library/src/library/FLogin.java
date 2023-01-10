@@ -97,6 +97,11 @@ public class FLogin extends javax.swing.JFrame {
         });
 
         level.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "kepala", "pustakawan" }));
+        level.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                levelActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -184,6 +189,10 @@ public class FLogin extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         cekLogin();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void levelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_levelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_levelActionPerformed
 
     /**
      * @param args the command line arguments
